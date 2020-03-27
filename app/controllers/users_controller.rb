@@ -21,12 +21,12 @@ class UsersController < ApplicationController
           format.js {render partial: 'users/friend_result' }  
           end 
       end
-  else
+    else
       respond_to do |format|
       flash.now[:alert] ="Please enter a Name/email to search"
       format.js {render partial: 'users/friend_result' }
       end 
-  end 
+    end 
   end
 
 end
